@@ -24,9 +24,16 @@ const layer2 = computed(() => ({
     transform: `translateX(${parallex.tilt * -40}px) translateY(${parallex.roll * -40}px) scale(1.2)`
 }))
 
-//import { useImage } from '@vueuse/core'
-import background from './assets/beach-1236581.jpg';
-import foreground from './assets/model-3212282.png';
+import { useImage } from '@vueuse/core'
+//import background from './assets/beach-1236581.jpg';
+//import foreground from './assets/model-3212282.png';
+
+import backgroundUrl from './assets/beach-1236581.jpg';
+import foregroundUrl from './assets/model-3212282.png';
+import foregroundUrl2 from './assets/model-3212282-cropped.png';
+
+//const backgroundUrl = new URL('./assets/beach-1236581.jpg', import.meta.url).href;
+//const foregroundUrl = new URL('./assets/model-3212282.png', import.meta.url).href;
 
 //const backgroundUrl = 'https://opticalraze.com/carry-on-packing-travel-agency/assets/beach-1236581-89342222.jpg'
 //const foregroundUrl = './assets/model-3212282.png'
@@ -34,7 +41,11 @@ import foreground from './assets/model-3212282.png';
 //const { isLoading } = useImage({ src: backgroundUrl })
 //const { isLoading } = useImage({ src: foregroundUrl })
 //const isLoading1 = true;
-const isLoading = false;
+//const isLoading = false;
+//const { isLoading } = useImage({ src: backgroundUrl });
+const { isLoading } = useImage({ src: foregroundUrl });
+//const foreground = useImage({ src: foregroundUrl });
+
 </script>
 
 <template>
@@ -47,9 +58,9 @@ const isLoading = false;
             </div>
         </section>
         <section v-else class="relative h-screen w-full flex items-center justify-center overflow-hidden">
-            <img :style="layer0" :src="background" alt="" class="z-10 absolute bottom-0 left-0 h-full w-full object-cover object-bottom">
+            <img :style="layer0" :src="backgroundUrl" alt="" class="z-10 absolute bottom-0 left-0 h-full w-full object-cover object-bottom">
             <h1 :style="layer1" class="font-black text-white z-20 mt-[-10rem]" style="font-size: 12rem;">Vacation Time</h1>
-            <img ref="target" :style="layer2" :src="foreground" alt="" class="z-40 absolute bottom-0 left-0 h-full w-full object-contain object-bottom pointer-events-none">
+            <img ref="target" :style="layer2" :src="foregroundUrl" :srcset="foregroundUrl2" alt="" class="z-40 absolute bottom-0 left-0 h-full w-full object-contain object-bottom pointer-events-none">
         </section>
     </main>
 </template>
