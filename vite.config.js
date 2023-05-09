@@ -1,8 +1,10 @@
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 
+const ASSET_URL = process.env.ASSET_URL || '';
+
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: 'https://opticalraze.com/carry-on-packing-travel-agency/',
+  base: ASSET_URL,
   plugins: [vue()],
 })
