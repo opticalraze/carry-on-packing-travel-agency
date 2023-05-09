@@ -24,16 +24,17 @@ const layer2 = computed(() => ({
     transform: `translateX(${parallex.tilt * -40}px) translateY(${parallex.roll * -40}px) scale(1.2)`
 }))
 
-import { useImage } from '@vueuse/core'
+//import { useImage } from '@vueuse/core'
 import background from './assets/beach-1236581.jpg';
 import foreground from './assets/model-3212282.png';
 
-//const backgroundUrl = './assets/beach-1236581.jpg'
+//const backgroundUrl = 'https://opticalraze.com/carry-on-packing-travel-agency/assets/beach-1236581-89342222.jpg'
 //const foregroundUrl = './assets/model-3212282.png'
 //const { isLoading } = useImage({ src: backgroundUrl })
-const { isLoading } = useImage({ background })
+//const { isLoading } = useImage({ src: backgroundUrl })
 //const { isLoading } = useImage({ src: foregroundUrl })
 //const isLoading1 = true;
+const isLoading = false;
 </script>
 
 <template>
