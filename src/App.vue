@@ -43,7 +43,7 @@ import foregroundUrl2 from './assets/model-3212282-cropped.png';
 //const isLoading1 = true;
 //const isLoading = false;
 //const { isLoading } = useImage({ src: backgroundUrl });
-const { isLoading } = useImage({ src: foregroundUrl });
+//const { isLoading } = useImage({ src: foregroundUrl });
 //const foreground = useImage({ src: foregroundUrl });
 
 </script>
@@ -51,7 +51,7 @@ const { isLoading } = useImage({ src: foregroundUrl });
 <template>
     <Header />
     <main>
-        <section v-if="isLoading" class="z-[60] fixed top-0 left-0 h-screen w-full bg-black flex items-center justify-center">
+        <section v-if="false" class="z-[60] fixed top-0 left-0 h-screen w-full bg-black flex items-center justify-center">
             <div>
                 <h1 class="text-9xl font-black text-white">Carry On Packing.</h1>
                 <h2 class="text-4xl font-thin text-white">Travel Agency</h2>
